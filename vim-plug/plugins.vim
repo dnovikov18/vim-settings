@@ -13,6 +13,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     Plug 'preservim/nerdtree'
+    Plug 'mattn/emmet-vim'
     Plug 'tpope/vim-fugitive'
     Plug 'vim-utils/vim-man'
     Plug 'mbbill/undotree'

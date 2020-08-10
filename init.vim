@@ -22,6 +22,7 @@ set cmdheight=2
 set updatetime=50
 
 let mapleader = " "
+let g:user_emmet_leader_key=','
 
 inoremap jk <Esc>
 nnoremap <C-p> :GFiles<CR>
