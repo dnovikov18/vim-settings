@@ -28,6 +28,7 @@ inoremap jk <Esc>
 nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>t :call ToggleNerdTree()<CR>
 nnoremap <C-n> :cnext<CR>
+nnoremap <C-s> :w<CR>
 nnoremap <C-m> :cprevious<CR>
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>g :Ag <CR>
