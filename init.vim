@@ -33,6 +33,7 @@ nnoremap <C-m> :cprevious<CR>
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>g :Ag <CR>
 nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader> :GoFmt<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
@@ -123,12 +124,13 @@ let g:go_highlight_function_calls = 1
 let g:go_highlight_generate_tags = 1
 let g:go_highlight_format_strings = 1
 let g:go_highlight_variable_declarations = 1
-let g:go_auto_sameids = 1
+let g:go_auto_sameids = 0 
 
 " go gloal settings
 let g:go_bin_path = expand("$HOME/.gvm/pkgsets/go1.2.1/global/bin/")
 let g:go_disable_autoinstall = 1
 let g:go_fmt_autosave = 1
+let g:go_fmt_command = "goimports"
 
 " disable vim-go :GoDef short cut (gd)
 " this is handled by LanguageClient [LC]
