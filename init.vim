@@ -23,6 +23,7 @@ set updatetime=50
 
 let mapleader = " "
 let g:user_emmet_leader_key=','
+let g:lsc_auto_map = v:true
 
 inoremap jk <Esc>
 nnoremap <C-p> :GFiles<CR>
