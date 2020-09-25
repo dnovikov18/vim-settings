@@ -3,3 +3,4 @@ coc-tslint
 coc-go
 coc-json
 coc-tsserver
+coc-flutter
