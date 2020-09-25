@@ -12,6 +12,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'jiangmiao/auto-pairs'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+    Plug 'dart-lang/dart-vim-plugin'
+    Plug 'natebosch/vim-lsc'
+    Plug 'natebosch/vim-lsc-dart'
+    Plug 'thosakwe/vim-flutter'
     Plug 'preservim/nerdtree'
     Plug 'wakatime/vim-wakatime'
     Plug 'mattn/emmet-vim'
