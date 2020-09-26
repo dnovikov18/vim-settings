@@ -1,5 +1,4 @@
 source $HOME/.config/nvim/vim-plug/plugins.vim
-
 syntax on
 
 set tabstop=2 softtabstop=2
@@ -22,8 +21,14 @@ set cmdheight=2
 set updatetime=50
 
 let mapleader = " "
-let g:user_emmet_leader_key=','
+
+let g:user_emmet_leader_key='`'
+
 let g:lsc_auto_map = v:true
+
+let g:UltiSnipsExpandTrigger="<leader>-<Tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 inoremap jk <Esc>
 nnoremap <C-p> :GFiles<CR>
@@ -68,12 +73,15 @@ nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document
 
 inoremap <silent><expr> <Tab>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<Tab>" :
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
+
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
+  let col = col('.') - 1
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~ '\s'
 endfunction

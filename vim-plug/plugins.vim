@@ -16,6 +16,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'natebosch/vim-lsc'
     Plug 'natebosch/vim-lsc-dart'
     Plug 'thosakwe/vim-flutter'
+    Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
     Plug 'preservim/nerdtree'
     Plug 'wakatime/vim-wakatime'
     Plug 'mattn/emmet-vim'
